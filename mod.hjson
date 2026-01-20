@@ -1,0 +1,26 @@
+{
+    "name": "arsenal-expansion-mod",
+    "displayName": "[#FF8FEB[]]Arsenal Expansion[[]]",
+    "author": "Miyuyuuki",
+    "subtitle": "[lime[]]Unit Expansion Mod[[]]",
+    "description": '''Made by a novice mod developer, far from finished. Adds more content to the player's arsenal. Four types of tanks await your command:
+                - [#FFA665[]]Assault[[]]
+                - [#84F491[]]Support[[]]
+                - [#BF92F9[]]Specialist[[]]
+                - [#FF1414[]]Flame[[]]
+
+                Heavily inspired by:
+                - Eschatologue's 'Unlimited Armament Works'
+                - nyuB's (뉴B) 'DuoMod'
+                - DedShotGames' 'WOTanks'
+                - Anuke's Erekir Tanks
+
+                SFX credits to the following games:
+                - Terraria
+                - Terraria: Calamity Mod
+                - Plants vs. Zombies
+                ''',
+    "version": 1,
+    "minGameVersion": 146,
+    "hidden": false,
+}
