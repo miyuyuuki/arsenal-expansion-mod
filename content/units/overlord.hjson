@@ -1,0 +1,223 @@
+{
+    "type": "tank",
+    "name": "[#FFA665]Overlord[]",
+    "description": '''
+    [#FFA665]<Tier II Assault Tank>[]
+
+    Heavy assault tank, fires powerful piercing shots from its twin railgun-type cannons and barrages enemies with bullets from its twin machine guns that shred anything in its path. 
+
+    Has below-average HP for a Tier 4 unit, but is compensated by its strong, Plastanium-reinforced armor.
+    ''',
+    "details": "Are you ready?",
+    "speed": 0.45,
+    "template": "TankUnitType",
+    "health": 6000,
+    "armor": 40, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 2.0,
+    "hitSize": 45, 
+    "targetAir": false,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 5,
+
+    "treadRects": [
+        {
+            "name": "overlord-treads",
+            "x": -56,
+            "y": -74,
+            "width": 20,
+            "height": 208
+        }
+    ],
+
+    "weapons": [
+    {
+        "name": "overlord-mg",
+        "reload": 4.5, 
+        "x": -11.5, 
+        "y": 10, 
+        "top": true, 
+        "rotate": true,
+        "rotationLimit": 180,
+        "shootY": 5,
+        "shootSound": "mgShoot1",
+        "ejectEffect": "casing1",
+        "mirror": false,
+        "rotateSpeed": 4,
+        "recoil": 1.5,
+        "inaccuracy": 5,
+        
+        "bullet": { 
+            "type": "BasicBulletType",
+            "speed": 10, 
+            "shootY": 5,
+            "width": 7.5,
+            "height": 22.5,
+            "damage": 20,
+            "buildingDamageMultiplier": 0.5,
+            "lifetime": 25,
+            "backColor": "#FFD06C",
+            "frontColor": "#FFFFFF",
+            "trailColor": "#FFD06C",
+            "trailLength": 7.5,
+            "trailWidth": 1.5,
+            "despawnColor": "#FFD06C",
+            "hitColor": "#FFD06C"
+        }
+    },
+
+    {
+        "name": "overlord-mg",
+        "reload": 4.5, 
+        "x": 11.5, 
+        "y": 10, 
+        "top": true, 
+        "rotate": true,
+        "rotationLimit": 180,
+        "shootY": 5,
+        "shootSound": "mgShoot1",
+        "ejectEffect": "casing1",
+        "mirror": false,
+        "rotateSpeed": 4,
+        "recoil": 1.5,
+        "inaccuracy": 5,
+        
+        "bullet": { 
+            "type": "BasicBulletType",
+            "speed": 10, 
+            "shootY": 5,
+            "width": 7.5,
+            "height": 22.5,
+            "damage": 20,
+            "buildingDamageMultiplier": 0.5,
+            "lifetime": 25,
+            "backColor": "#FFD06C",
+            "frontColor": "#FFFFFF",
+            "trailColor": "#FFD06C",
+            "trailLength": 7.5,
+            "trailWidth": 1.5,
+            "despawnColor": "#FFD06C",
+            "hitColor": "#FFD06C"
+        }
+    },
+
+        { 
+        "name": "overlord-turret",
+        "reload": 60, 
+        "x": 0, 
+        "y": -5, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 40,
+        "shake": 10,
+        "shootSound": "heavyGunShoot1",
+        "ejectEffect": "casing4",
+        "mirror": false,    
+        "rotateSpeed": 1.5,
+        "recoil": 5,
+        "recoils": 2,
+        
+        "shoot": {
+        "type": "ShootAlternate",
+        "spread": -20
+        },
+
+        "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-gun-l",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "recoilIndex": 1,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -5
+                }
+            ],
+        },
+
+        {
+            "type": "RegionPart",
+            "suffix": "-gun-r",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "recoilIndex": 0,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -5
+                }
+            ]
+        }, 
+    ],
+
+        "bullet": { 
+            "type": "BasicBulletType",
+            "speed": 20, 
+            "shootY": 22.5,
+            "width": 20,
+            "height": 75,
+            "shootEffect": [
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 45,
+                "smokes": 0,
+                "sparks": 0
+                },
+
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 35,
+                "smokes": 0,
+                "sparks": 0
+                },
+
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 25,
+                "smokes": 0,
+                "sparks": 0
+                }
+            ],
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#FFD06C",
+            "trailLength": 15,
+            "trailWidth": 5,
+            "trailEffect": "none",
+            "damage": 200,
+            "lifetime": 20,
+            "pierceCap": 3,
+            "pierceBuilding": true,
+            "pierceDamageFactor": 0.9,
+            "backColor": "#FFD06C",
+            "frontColor": "#FFFFFF",
+            "despawnEffect":  "none",
+            "hitSound": "none"
+        }
+    }
+],
+
+"research": {
+        "parent": "battlemaster",
+        "requirements": [
+            { "item": "silicon", amount: 60000 },
+            { "item": "titanium", amount: 52500 },
+            { "item": "plastanium", amount: 45000 }
+        ]
+    }
+}

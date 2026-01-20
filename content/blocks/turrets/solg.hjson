@@ -1,0 +1,239 @@
+{
+    "type": "ItemTurret",
+    "name": "[#FFA665]Sharpshooter[]",
+    "description": '''
+    Fires powerful piercing railgun shots at enemy targets.
+    ''',
+    "health": 2200,
+    "size": 4,
+    "reload": 60,
+    "shootSound": "heavyGunShoot1",
+    "ammoUseEffect": "casing4",
+    "targetAir": true,
+    "targetGround": true,
+    "range": 400,
+    "inaccuracy": 0,
+    "shake": 10,
+    "shootY": 40,
+    "ammoPerShot": 4,
+    "rotateSpeed": 1.5,
+    "recoil": 5,
+    "recoils": 2,
+        
+    "shoot": {
+        "type": "ShootAlternate",
+        "spread": -20
+    },
+    "drawer": {
+    "type": "DrawTurret"
+    "parts": [
+        {
+        "type": "RegionPart",
+        "suffix": "-barrel-l",
+        "x": 0, 
+        "y": -0.34,
+        "under": true,
+        "recoilIndex": 1,
+        "moves": [
+            {
+            "type": "PartMove",
+            "progress": "recoil",
+            "y": -5
+            }
+        ],
+    },
+
+    {
+        "type": "RegionPart",
+        "suffix": "-barrel-r",
+        "x": 0, 
+        "y": -0.34,
+        "under": true,
+        "recoilIndex": 0,
+        "moves": [
+            {
+            "type": "PartMove",
+            "progress": "recoil",
+            "y": -5
+            }
+        ]
+    }
+]
+},
+
+    "ammoTypes": {
+        "titanium": {
+            "ammoMultiplier": 1,
+            "reloadMultiplier": 1.5,
+            "type": "BasicBulletType", 
+            "speed": 20, 
+            "shootY": 22.5,
+            "width": 20,
+            "height": 75,
+            "shootEffect": [
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#A4B8FA",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 45,
+                "smokes": 0,
+                "sparks": 0
+                },
+
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#A4B8FA",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 35,
+                "smokes": 0,
+                "sparks": 0
+                },
+
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#A4B8FA",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 25,
+                "smokes": 0,
+                "sparks": 0
+                }
+            ],
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#A4B8FA",
+            "trailLength": 15,
+            "trailWidth": 5,
+            "trailEffect": "none",
+            "damage": 150,
+            "lifetime": 20,
+            "pierceCap": 2,
+            "pierceBuilding": true,
+            "pierceDamageFactor": 0.9,
+            "backColor": "#A4B8FA",
+            "frontColor": "#FFFFFF",
+            "despawnEffect":  "none",
+            "hitSound": "none"
+        },
+
+        "thorium": {
+            "ammoMultiplier": 1,
+            "type": "BasicBulletType", 
+            "speed": 20, 
+            "shootY": 22.5,
+            "width": 20,
+            "height": 75,
+            "shootEffect": [
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#F9A3C7",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 45,
+                "smokes": 0,
+                "sparks": 0
+                },
+
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#F9A3C7",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 35,
+                "smokes": 0,
+                "sparks": 0
+                },
+
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#F9A3C7",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 25,
+                "smokes": 0,
+                "sparks": 0
+                }
+            ],
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#F9A3C7",
+            "trailLength": 15,
+            "trailWidth": 5,
+            "trailEffect": "none",
+            "damage": 200,
+            "lifetime": 20,
+            "pierceCap": 3,
+            "pierceBuilding": true,
+            "pierceDamageFactor": 0.9,
+            "backColor": "#F9A3C7",
+            "frontColor": "#FFFFFF",
+            "despawnEffect":  "none",
+            "hitSound": "none"
+        },
+
+        "surge-alloy": {
+            "ammoMultiplier": 2,
+            "rangeChange": 88,
+            "type": "BasicBulletType", 
+            "speed": 20, 
+            "shootY": 22.5,
+            "width": 20,
+            "height": 75,
+            "shootEffect": [
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#FCF387",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 45,
+                "smokes": 0,
+                "sparks": 0
+                },
+
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#FCF387",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 35,
+                "smokes": 0,
+                "sparks": 0
+                },
+
+                {
+                "type": "ExplosionEffect",
+                "waveColor": "#FCF387",
+                "waveStroke": 5,
+                "waveLife": 15,
+                "waveRad": 25,
+                "smokes": 0,
+                "sparks": 0
+                }
+            ],
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#FCF387",
+            "trailLength": 15,
+            "trailWidth": 5,
+            "trailEffect": "none",
+            "damage": 300,
+            "lifetime": 28.4,
+            "pierceCap": 4,
+            "pierceBuilding": true,
+            "pierceDamageFactor": 0.95,
+            "backColor": "#FCF387",
+            "frontColor": "#FFFFFF",
+            "despawnEffect":  "none",
+            "hitSound": "none"
+        }
+    },
+
+    "category": "turret",
+    "research": "sbmc",
+    "requirements": [
+        { "item": "copper", "amount": 400 },
+        { "item": "graphite", "amount": 250 },
+        { "item": "titanium", "amount": 200 },
+        { "item": "thorium", "amount": 175 },
+        { "item": "plastanium", "amount": 125 }
+    ]
+}

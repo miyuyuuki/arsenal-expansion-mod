@@ -1,0 +1,93 @@
+{
+    "type": "tank",
+    "name": "[#FF1414]Dragon Tank[]",
+    "description": '''
+    [#FF1414]<Tier I Flame Tank>[]
+
+    Scorches ground targets that cause nearby fires. Highly effective at close range.
+    ''',
+    "details": "It's very hot in here!",
+    "speed": 0.75,
+    "template": "TankUnitType",
+    "health": 900,
+    "armor": 10, 
+    "treadPullOffset": 3,    
+    "rotateSpeed": 3.5,
+    "hitSize": 30,
+    "targetAir": false,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 2.5,
+    "immunities": ["burning", "melting"]
+
+    "treadRects": [
+        {
+	        "name":"dragon-tank-treads",
+            "x": -40,
+            "y": -46,
+            "width": 20,
+            "height": 128
+        }
+    ],
+    
+    "weapons": [
+    { 
+        "name": "dragon-tank-turret",
+        "reload": 2.5, 
+        "x": 0, 
+        "y": -0.5, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 23,
+        "shootSound": "dragonTankFire",
+        "ejectEffect": "none",
+        "mirror": false,
+        "rotateSpeed": 5,
+        "recoil": 0,
+        "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-gun",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": 0
+                }
+            ]
+        }
+    ],
+
+        "bullet": { 
+        "type": "BulletType",
+            "speed": 16,
+            "damage": 20,
+            "pierceArmor": true,
+            "hitSize": 5,
+            "lifetime": 4,
+            "pierceCap": 2,
+            "shootEffect": "shootPyraFlame",
+            "hitEffect": "hitFlameSmall",
+            "despawnEffect": "none",
+            "makeFire": true,
+            "status": "burning",
+            "statusDuration": 300,
+            "keepVelocity": false,
+            "hittable": false
+        }
+    }
+],
+
+    "research": {
+        "parent": "war-factory",
+        "requirements": [
+            { "item": "copper", "amount": 10000 },
+            { "item": "graphite", "amount": 9000 },
+            { "item": "silicon", "amount": 8500 },
+            { "item": "titanium", "amount": 8000 }
+        ]
+    }
+}

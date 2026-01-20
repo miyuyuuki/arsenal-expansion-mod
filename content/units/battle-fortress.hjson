@@ -1,0 +1,187 @@
+{
+    "type": "tank",
+    "name": "[#84F491]Battle Fortress[]",
+    "description": '''
+    [#84F491]<Tier II Support Tank>[]
+
+    Heavy support tank, fires bursts of high-damage supersonic bolts that pierce through enemy targets and repair allied structures. 
+    
+    Nullifies incoming bullets with point-defense weapons, repairs nearby allied units with its repair field, projects a forcefield around itself, and overclocks nearby allies, boosting their combat capabilities.
+
+    Immune to Burning, Melting, Sapped, and Spore Slowed.
+    ''',
+    "details": "Not to be confused with vanilla Fortress.",
+    "speed": 0.5,
+    "template": "TankUnitType",
+    "health": 6500,
+    "armor": 25, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 2,
+    "hitSize": 45, 
+    "targetAir": false,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 5,
+    "immunities": ["burning", "melting", "sapped", "spore-slowed"],
+
+    "treadRects": [
+        {
+            "name": "battle-fortress-treads",
+            "x": -56,
+            "y": -74,
+            "width": 20,
+            "height": 208
+        }
+    ],
+
+    "weapons": [ 
+        {   
+            "type": "PointDefenseWeapon",
+            "name": "battle-fortress-point-defense-weapon",
+            "mirror": false,
+            "x": -11.5,
+            "y": 10,
+            "reload": 9,
+            "recoil": 0,
+            "targetInterval": 10,
+            "targetSwitchInterval": 15,
+
+            "bullet": {
+                "type": "BulletType",
+                "shootEffect": "sparkShoot",
+                "hitEffect": "pointHit",
+                "maxRange": 240,
+                "damage": 60
+            }
+        },
+
+        {   
+            "type": "PointDefenseWeapon",
+            "name": "battle-fortress-point-defense-weapon",
+            "mirror": false,
+            "x": 11.5,
+            "y": 10,
+            "reload": 9,
+            "recoil": 0,
+            "targetInterval": 10,
+            "targetSwitchInterval": 15,
+
+            "bullet": {
+                "type": "BulletType",
+                "shootEffect": "sparkShoot",
+                "hitEffect": "pointHit",
+                "maxRange": 240,
+                "damage": 60
+            }
+        },
+
+        {
+            "name": "battle-fortress-turret",
+            "reload": 75, 
+            "x": 0, 
+            "y": -5, 
+            "top": true, 
+            "rotate": true,
+            "shootY": 15,
+            "shake": 1.25,
+            "shootSound": "tankShoot3",
+            "ejectEffect": "casing4",
+            "mirror": false,
+            "rotateSpeed": 2.5,
+            "recoil": 7.5,
+            "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-coil",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -7.5
+                }
+            ]
+        }
+    ],
+
+            "shoot": {
+                "type": "ShootPattern",
+                "shots": 3,
+                "shotDelay": 7.5,
+            },
+    
+            "bullet": { 
+                "type": "BasicBulletType",
+                "speed": 25, 
+                "shootY": 45,
+                "width": 15,
+                "height": 25,
+                "healPercent": 15,
+                "damage": 100,
+                "pierceCap": 4,
+                "lifetime": 15,
+                "collides": true,
+                "collidesTiles": true,
+                "trailColor": "#62AE7F",
+                "trailLength": 10,
+                "trailWidth": 5
+                "backColor": "#62AE7F",
+                "frontColor": "#FFFFFF",
+                "despawnShake": 0.625,
+                "despawnEffect": {
+                    "type": "ExplosionEffect",
+                    "waveColor": "#84F491",
+                    "waveStroke": 5,
+                    "waveRad": 20,
+                    "smokes": 0,
+                    "sparks": 0
+                }
+                "hitShake": 0.625,
+                "hitEffect": {
+                    "type": "ExplosionEffect",
+                    "waveColor": "#84F491",
+                    "waveStroke": 5,
+                    "waveRad": 20,
+                    "smokes": 0,
+                    "sparks": 0
+                }
+            }
+        }
+    ],
+
+    "abilities": [
+        {
+            "type": "mindustry.entities.abilities.RepairFieldAbility",
+            "amount": 200,
+            "reload": 90,
+            "range": 120
+        },
+
+        {
+            "type": "mindustry.entities.abilities.ForceFieldAbility",
+            "radius": 90,
+            "regen": 2,
+            "max": 1200,
+            "cooldown": 300
+        },
+
+        {
+            "type": "mindustry.entities.abilities.StatusFieldAbility",
+            "effect": "overclock",
+            "duration": 600,
+            "reload": 900,
+            "range": 90
+        }
+    ],
+
+    "research": {
+        "parent": "mrt",
+        "requirements": [
+            { "item": "silicon", "amount": 60000 },
+            { "item": "titanium", "amount": 52500 },
+            { "item": "plastanium", "amount": 45000 }
+        ]
+    }
+}

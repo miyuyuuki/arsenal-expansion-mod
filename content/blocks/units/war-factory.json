@@ -1,0 +1,63 @@
+{
+    "type": "UnitFactory",
+    "name": "War Factory",
+    "description": "Produces tanks. Output tanks can be used directly, or moved into reconstructors for upgrading.",
+    "details": "All tanks produced by this factory are comparable to Tier 3 vanilla units.",
+    "health": 1000,
+    "size": 5,
+    "itemCapacity": 200,
+    "solid": true,
+    "research": "icon",
+
+    "consumes": {
+        "power": 4
+    },
+
+    "requirements": [ 
+        { "item": "lead", "amount": 350 }, 
+        { "item": "graphite", "amount": 225 },
+        { "item": "silicon", "amount": 200 },
+        { "item": "titanium", "amount": 250 }
+    ],
+
+    "plans": [
+        { "unit": "battlemaster",
+            "requirements": [
+                { "item": "graphite", "amount": 90 },
+                { "item": "silicon", "amount": 85 },
+                { "item": "titanium", "amount": 80 }
+            ],
+            "time": 1800
+        },
+
+        { "unit": "gauss-tank",
+            "requirements": [
+                { "item": "graphite", "amount": 60 },
+                { "item": "silicon", "amount": 55 },
+                { "item": "titanium", "amount": 50 }
+            ],
+            "time": 1200
+        },
+
+        { "unit": "mrt",
+            "requirements": [
+                { "item": "lead", "amount": 75 },
+                { "item": "graphite", "amount": 70 },
+                { "item": "silicon", "amount": 65 },
+                { "item": "titanium", "amount": 60 }
+            ],
+            "time": 2700
+        },
+
+        { "unit": "dragon-tank",
+            "requirements": [
+                { "item": "copper", "amount": 100 },
+                { "item": "graphite", "amount": 90 },
+                { "item": "silicon", "amount": 70 },
+                { "item": "titanium", "amount": 80 }
+            ],
+            "time": 2250
+        }
+    ],
+    "category": "units"
+}

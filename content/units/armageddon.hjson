@@ -1,0 +1,357 @@
+{
+    "type": "tank",
+    "name": "[#BF92F9]Armageddon[]",
+    "description": '''
+    [#BF92F9]<Tier III Specialist Tank>[]
+
+    Superheavy artillery tank, fires an unrelenting barrage of high-damaging artillery shells from afar, raining heavy destruction on anyone unfortunate enough to land on its crosshairs.
+
+    Has a decent rate of fire thanks to its dual twin artillery guns. 
+    
+    Armed with two extra small autocannons to protect itself against close encounters and aerial threats.
+    ''',
+    "speed": 0.325,
+    "template": "TankUnitType",
+    "health": 12500,
+    "armor": 35, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 1,
+    "hitSize": 60, 
+    "targetAir": false,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 10,
+
+    "treadRects": [
+        {
+            "name": "armageddon-treads",
+            "x": -64,
+            "y": -146,
+            "width": 20,
+            "height": 336
+        }
+    ],
+
+    "weapons": [
+        {
+        "name": "armageddon-cannon",
+        "reload": 15, 
+        "x": -14.25, 
+        "y": -2.5, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 5,
+        "shootSound": "mgShoot2",
+        "ejectEffect": "casing2",
+        "mirror": false,
+        "rotateSpeed": 4,
+        "recoil": 1.5,
+        "inaccuracy": 2,
+        "targetAir": true,
+        "targetGround": true,
+        
+        "bullet": { 
+            "type": "BasicBulletType", 
+            "speed": 10, 
+            "shootY": 22.5,
+            "width": 10,
+            "height": 20,
+            "shootEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 2.5,
+                "waveRad": 5,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "splashDamageRadius": 30, 
+            "splashDamage": 50,
+            "scaledSplashDamage": true,
+            "damage": 25,
+            "lifetime": 27.5,
+            "trailColor": "#FFD06C",
+            "trailLength": 6,
+            "trailWidth": 2,
+            "trailEffect": "none",
+            "backColor": "#FFD06C",
+            "frontColor": "#FFFFFF",
+            "despawnShake": 0.625,
+            "despawnEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "hitShake": 0.625,
+            "hitSound": "none",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+               }
+            }
+        },
+
+        { 
+        "name": "armageddon-cannon",
+        "reload": 15, 
+        "x": 14.25, 
+        "y": -2.5, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 5,
+        "shootSound": "mgShoot2",
+        "ejectEffect": "casing2",
+        "mirror": false,
+        "rotateSpeed": 4,
+        "recoil": 1.5,
+        "inaccuracy": 2,
+        "targetAir": true,
+        "targetGround": true,
+        
+        "bullet": { 
+            "type": "BasicBulletType", 
+            "speed": 10, 
+            "shootY": 22.5,
+            "width": 10,
+            "height": 20,
+            "shootEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 2.5,
+                "waveRad": 5,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "splashDamageRadius": 30, 
+            "splashDamage": 50,
+            "scaledSplashDamage": true,
+            "damage": 25,
+            "lifetime": 27.5,
+            "trailColor": "#FFD06C",
+            "trailLength": 6,
+            "trailWidth": 2,
+            "trailEffect": "none",
+            "backColor": "#FFD06C",
+            "frontColor": "#FFFFFF",
+            "despawnShake": 0.625,
+            "despawnEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "hitShake": 0.625,
+            "hitSound": "none",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+               }
+            }
+        },
+
+        {
+        "name": "armageddon-turret",
+        "reload": 70, 
+        "x": 0, 
+        "y": 16, 
+        "top": true, 
+        "rotate": true,
+        "rotationLimit": 180,
+        "shootY": 30,
+        "shake": 5,
+        "shootSound": "heavyGunShoot2",
+        "ejectEffect": "casing4",
+        "mirror": false,    
+        "rotateSpeed": 1,
+        "recoil": 5,
+        "recoils": 2,
+        
+        "shoot": {
+        "type": "ShootAlternate",
+        "spread": -8
+        },
+
+        "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-gun-l",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "recoilIndex": 1,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -10
+                }
+            ]
+            },
+
+            {
+            "type": "RegionPart",
+            "suffix": "-gun-r",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "recoilIndex": 0,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -10
+                }
+            ]
+        }
+        ],
+
+        "bullet": { 
+            "type": "ArtilleryBulletType",
+            "radius": 10,
+            "speed": 3, 
+            "shootY": 30,
+            "width": 15,
+            "height": 30,
+            "splashDamageRadius": 90, 
+            "splashDamage": 150,
+            "scaledSplashDamage": true,
+            "damage": 37.5,
+            "buildingDamageMultiplier": 1.5,
+            "lifetime": 180,
+            "collides": true,
+            "collidesTiles": true,
+            "shootEffect": "shootBig"
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#FFD06C",
+            "trailLength": 45,
+            "trailWidth": 3.5,
+            "trailSinScl": 0.1,
+            "trailSinMag": 0.5,
+            "trailEffect": "none",
+            "backColor": "#FFD06C",
+            "frontColor": "#FFFFFF",
+            "despawnColor": "#FFD06C",
+            "despawnEffect": "none",
+            "despawnShake": 2.5,
+            "hitEffect": ["scatheLight", "scatheExplosion"]
+            "hitSound": "boomSound1",
+            "hitColor": "#FFD06C",
+            "hitShake": 2.5,
+            "shrinkY": 0
+            }
+        },
+
+        { 
+        "name": "armageddon-turret",
+        "reload": 90, 
+        "x": 0, 
+        "y": -21, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 30,
+        "shake": 5,
+        "shootSound": "heavyGunShoot2",
+        "ejectEffect": "casing4",
+        "mirror": false,    
+        "rotateSpeed": 1,
+        "recoil": 5,
+        "recoils": 2,
+        
+        "shoot": {
+        "type": "ShootAlternate",
+        "spread": -8
+        },
+
+        "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-gun-l",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "recoilIndex": 1,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -10
+                }
+            ]
+            },
+
+            {
+            "type": "RegionPart",
+            "suffix": "-gun-r",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "recoilIndex": 0,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -10
+                }
+            ]
+        }
+        ],
+
+        "bullet": { 
+            "type": "ArtilleryBulletType",
+            "radius": 10,
+            "speed": 3, 
+            "shootY": 30,
+            "width": 15,
+            "height": 30,
+            "splashDamageRadius": 90, 
+            "splashDamage": 150,
+            "scaledSplashDamage": true,
+            "damage": 37.5,
+            "buildingDamageMultiplier": 1.5,
+            "lifetime": 180,
+            "collides": true,
+            "collidesTiles": true,
+            "shootEffect": "shootBig"
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#FFD06C",
+            "trailLength": 45,
+            "trailWidth": 3.5,
+            "trailSinScl": 0.1,
+            "trailSinMag": 0.5,
+            "trailEffect": "none",
+            "backColor": "#FFD06C",
+            "frontColor": "#FFFFFF",
+            "despawnColor": "#FFD06C",
+            "despawnEffect": "none",
+            "despawnShake": 2.5,
+            "hitEffect": ["scatheLight", "scatheExplosion"]
+            "hitSound": "boomSound1",
+            "hitColor": "#FFD06C",
+            "hitShake": 2.5,
+            "shrinkY": 0
+            }
+        }
+    ],
+
+    "research": {
+        "parent": "golem-tank",
+        "requirements": [
+            { "item": "silicon", amount: 90000 },
+            { "item": "surge-alloy", amount: 45000 },
+            { "item": "plastanium", amount: 60000 },
+            { "item": "phase-fabric", amount: 40000 },
+        ]
+    }
+}

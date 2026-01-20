@@ -1,0 +1,177 @@
+{
+    "type": "tank",
+    "name": "[#84F491]Mobile Repair Tank[]",
+    "description": '''
+    [#84F491]<Tier I Support Tank>[]
+
+    Support tank, fires shells that damage enemies and repair allied structures. 
+    
+    Nullifies incoming bullets and repairs nearby allied units with its repair field.
+    ''',
+    "speed": 0.65,
+    "template": "TankUnitType",
+    "health": 850,
+    "armor": 5, 
+    "treadPullOffset": 3,    
+    "rotateSpeed": 3.5,
+    "hitSize": 30, 
+    "targetAir": false,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 2.5,
+
+    "treadRects": [
+        {
+	        "name":"mrt-treads",
+            "x": -40,
+            "y": -56,
+            "width": 20,
+            "height": 128
+        }
+    ],
+
+    "weapons": [ 
+        {   
+            "type": "PointDefenseWeapon",
+            "name": "mrt-point-defense-weapon",
+            "mirror": false,
+            "x": -7.5,
+            "y": 9,
+            "reload": 9,
+            "recoil": 0,
+            "targetInterval": 10,
+            "targetSwitchInterval": 15,
+
+            "bullet": {
+                "type": "BulletType",
+                "shootEffect": "sparkShoot",
+                "hitEffect": "pointHit",
+                "maxRange": 120,
+                "damage": 30
+            }
+        },
+
+        { 
+            "type": "PointDefenseWeapon",
+            "name": "mrt-point-defense-weapon",
+            "mirror": false,
+            "x": 7.5,
+            "y": 9,
+            "reload": 9,
+            "recoil": 0,
+            "targetInterval": 10,
+            "targetSwitchInterval": 15,
+
+            "bullet": {
+                "type": "BulletType",
+                "shootEffect": "sparkShoot",
+                "hitEffect": "pointHit",
+                "maxRange": 120,
+                "damage": 30
+            }
+        },
+
+        {
+            "name": "mrt-turret",
+            "reload": 90, 
+            "x": 0, 
+            "y": -0.34, 
+            "top": true, 
+            "rotate": true,
+            "shootY": 20,
+            "shake": 5,
+            "shootSound": "tankShoot2",
+            "ejectEffect": "casing3",
+            "mirror": false,
+            "rotateSpeed": 2.5,
+            "recoil": 3,
+            "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-gun",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -3
+                }
+            ]
+        }
+    ],
+    
+            "bullet": { 
+                "type": "ArtilleryBulletType",
+                "speed": 4.5, 
+                "shootY": 25,
+                "width": 12.5,
+                "height": 30,
+                "shootEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#84F491",
+                "waveStroke": 2.5,
+                "waveRad": 15,
+                "smokes": 0,
+                "sparks": 0
+                },
+                "splashDamageRadius": 45, 
+                "splashDamage": 75,
+                "scaledSplashDamage": true,
+                "healPercent": 10,
+                "damage": 18.75,
+                "lifetime": 60,
+                "collides": true,
+                "collidesTiles": true,
+                "smokeEffect": "shootSmokeTitan",
+                "trailColor": "#62AE7F",
+                "trailLength": 25,
+                "trailWidth": 2.5,
+                "trailEffect": "none",
+                "trailColor": "#62AE7F", 
+                "backColor": "#62AE7F",
+                "frontColor": "#FFFFFF",
+                "despawnShake": 2.5,
+                "despawnEffect": {
+                    "type": "ExplosionEffect",
+                    "waveColor": "#84F491",
+                    "waveStroke": 5,
+                    "waveRad": 45,
+                    "smokes": 0,
+                    "sparks": 0
+                },
+                "hitSound": "repairSound1",
+                "hitShake": 2.5,
+                "hitEffect": {
+                    "type": "ExplosionEffect",
+                    "waveColor": "#84F491",
+                    "waveStroke": 5,
+                    "waveRad": 45,
+                    "smokes": 0,
+                    "sparks": 0
+                },
+                "shrinkY": 0
+            }
+        }
+    ],
+
+    "abilities": [
+        {
+            "type": "mindustry.entities.abilities.RepairFieldAbility",
+            "amount": 50,
+            "reload": 120,
+            "range": 60
+        }
+    ],
+
+    "research": {
+        "parent": "war-factory",
+        "requirements": [
+            { "item": "lead", amount: 7500 },
+            { "item": "graphite", amount: 7000 },
+            { "item": "silicon", amount: 6500 },
+            { "item": "titanium", amount: 6000 }
+        ]
+    }
+}

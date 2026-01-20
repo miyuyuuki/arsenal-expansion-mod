@@ -1,0 +1,78 @@
+{
+    "type": "ItemTurret",
+    "name": "[#BF92F9]Armageddon Autocannon[]",
+    "description": '''
+    Fires shells at enemy targets at a moderate rate.
+    ''',
+    "health": 800,
+    "size": 2,
+    "reload": 15,
+    "shootSound": "mgShoot2",
+    "ammoUseEffect": "casing2",
+    "targetAir": true,
+    "targetGround": true,
+    "range": 275,
+    "recoil": 1.5,
+    "inaccuracy": 2,
+    "shake": 1.25,
+    "shootY": 5,
+    "rotateSpeed": 4,
+
+    "ammoTypes": {
+        "graphite": {
+            "ammoMultiplier": 2,
+            "type": "BasicBulletType", 
+            "speed": 10, 
+            "shootY": 5,
+            "width": 10,
+            "height": 20,
+            "shootEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#95ABD9",
+                "waveStroke": 2.5,
+                "waveRad": 5,
+                "smokes": 0,
+                "sparks": 0,
+            },
+            "splashDamageRadius": 30, 
+            "splashDamage": 50,
+            "scaledSplashDamage": true,
+            "damage": 25,
+            "lifetime": 27.5,
+            "trailColor": "#95ABD9",
+            "trailLength": 10,
+            "trailWidth": 2,
+            "trailEffect": "none",
+            "backColor": "#95ABD9",
+            "frontColor": "#FFFFFF",
+            "despawnShake": 0.625,
+            "despawnEffect":  {
+                "type": "ExplosionEffect",
+                "waveColor": "#95ABD9",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+                },
+            "hitShake": 0.625,
+            "hitSound": "none",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#95ABD9",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+            }
+        }
+    },
+
+    "category": "turret",
+    "research": "sgtg",
+    "requirements": [
+        { "item": "silicon", "amount": 100 },
+        { "item": "graphite", "amount": 115 },
+        { "item": "titanium", "amount": 85 },
+        { "item": "thorium", "amount": 80 }
+    ]
+}

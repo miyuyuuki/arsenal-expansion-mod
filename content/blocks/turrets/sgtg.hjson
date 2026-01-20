@@ -1,0 +1,194 @@
+{
+    "type": "ItemTurret",
+    "name": "[#BF92F9]Gauss Autocannon[]",
+    "description": '''
+    Rapidly fires gauss shells at enemy targets. Works well against clumped enemies.
+    ''',
+    "health": 1000,
+    "size": 3,
+    "reload": 6.50,
+    "shootSound": "mgShoot2",
+    "ammoUseEffect": "casing2",
+    "targetAir": true,
+    "targetGround": true,
+    "range": 200,
+    "inaccuracy": 5,
+    "shake": 1.25,
+    "shootY": 22.5,
+    "rotateSpeed": 4,
+    "recoil": 2,
+    "drawer": {
+        "type": "DrawTurret"
+            "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-barrel",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -2
+                }
+            ]
+        }
+    ]
+},
+
+    "ammoTypes": {
+        "graphite": {
+            "ammoMultiplier": 4,
+            "type": "BasicBulletType", 
+            "speed": 10, 
+            "shootY": 22.5,
+            "width": 10,
+            "height": 20,
+            "shootEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#95ABD9",
+                "waveStroke": 2.5,
+                "waveRad": 5,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "splashDamageRadius": 20, 
+            "splashDamage": 20,
+            "scaledSplashDamage": true,
+            "damage": 15,
+            "lifetime": 20,
+            "trailColor": "#95ABD9",
+            "trailLength": 6,
+            "trailWidth": 2,
+            "trailEffect": "none",
+            "backColor": "#95ABD9",
+            "frontColor": "#FFFFFF",
+            "despawnShake": 0.625,
+            "despawnEffect":  {
+                "type": "ExplosionEffect",
+                "waveColor": "#95ABD9",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+                },
+            "hitShake": 0.625,
+            "hitSound": "none",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#95ABD9",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+            }
+        },
+
+        "pyratite": {
+            "ammoMultiplier": 6,
+            "type": "BasicBulletType", 
+            "speed": 10, 
+            "shootY": 22.5,
+            "width": 10,
+            "height": 20,
+            "shootEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFAA5F",
+                "waveStroke": 2.5,
+                "waveRad": 5,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "splashDamageRadius": 20, 
+            "splashDamage": 25,
+            "scaledSplashDamage": true,
+            "damage": 20,
+            "lifetime": 20,
+            "trailColor": "#FFAA5F",
+            "trailLength": 6,
+            "trailWidth": 2,
+            "trailEffect": "none",
+            "backColor": "#FFAA5F",
+            "frontColor": "#FFFFFF",
+            "despawnShake": 0.625,
+            "despawnEffect":  {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFAA5F",
+                "waveStroke": 5,
+                "waveRad": 15,
+                "smokes": 0,
+                "sparks": 0
+                },
+            "hitShake": 0.625,
+            "hitSound": "none",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFAA5F",
+                "waveStroke": 5,
+                "waveRad": 15,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "makeFire": true,
+            "status": "burning",
+            "statusDuration": 300,
+        },
+
+        "thorium": {
+            "ammoMultiplier": 4,
+            "rangeChange": 72,
+            "type": "BasicBulletType", 
+            "speed": 10, 
+            "shootY": 22.5,
+            "width": 10,
+            "height": 20,
+            "shootEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#F9A3C7",
+                "waveStroke": 2.5,
+                "waveRad": 5,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "splashDamageRadius": 25, 
+            "splashDamage": 35,
+            "scaledSplashDamage": true,
+            "damage": 25,
+            "lifetime": 27.2,
+            "trailColor": "#F9A3C7",
+            "trailLength": 6,
+            "trailWidth": 2,
+            "trailEffect": "none",
+            "backColor": "#F9A3C7",
+            "frontColor": "#FFFFFF",
+            "despawnShake": 0.625,
+            "despawnEffect":  {
+                "type": "ExplosionEffect",
+                "waveColor": "#F9A3C7",
+                "waveStroke": 5,
+                "waveRad": 25,
+                "smokes": 0,
+                "sparks": 0
+                },
+            "hitShake": 0.625,
+            "hitSound": "none",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#F9A3C7",
+                "waveStroke": 5,
+                "waveRad": 25,
+                "smokes": 0,
+                "sparks": 0
+            }
+        }
+    },
+
+    "category": "turret",
+    "research": "sbmmg",
+    "requirements": [
+        { "item": "lead", "amount": 125 },
+        { "item": "graphite", "amount": 100 },
+        { "item": "titanium", "amount": 75 }
+    ]
+}

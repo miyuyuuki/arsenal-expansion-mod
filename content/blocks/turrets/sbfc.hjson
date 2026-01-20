@@ -1,0 +1,96 @@
+{
+    "type": "PowerTurret",
+    "name": "[#84F491]Hyperbolt[]",
+    "description": '''
+    Fires bursts of high-damage supersonic bolts that pierce through enemy targets and repair allied structures.
+
+    Requires power to function.
+    ''',
+    "health": 2400,
+    "size": 4,
+    "reload": 75,
+    "inaccuracy": 0,
+    "shootSound": "tankShoot3",
+    "ammoUseEffect": "casing4",
+    "targetAir": true,
+    "targetGround": true,
+    "range": 375,
+    "shake": 1.25,
+    "shootY": 15,
+    "rotateSpeed": 2.5,
+    "recoil": 7.5,
+    "drawer": {
+        "type": "DrawTurret"
+            "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-barrel",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -7.5
+                }
+            ]
+        }
+    ]
+},
+
+    "shoot": {
+        "type": "ShootPattern",
+        "shots": 3,
+        "shotDelay": 7.5,
+    },
+
+    "consumes": {
+        "power": 6
+    },
+    
+    "shootType": {
+        "ammoMultiplier": 1,
+        "type": "BasicBulletType",
+        "speed": 25, 
+        "shootY": 45,
+        "width": 15,
+        "height": 25,
+        "healPercent": 15,
+        "damage": 100,
+        "pierceCap": 4,
+        "lifetime": 15,
+        "trailColor": "#62AE7F",
+        "trailLength": 10,
+        "trailWidth": 5
+        "backColor": "#62AE7F",
+        "frontColor": "#FFFFFF",
+        "despawnShake": 0.625,
+        "despawnEffect": {
+            "type": "ExplosionEffect",
+            "waveColor": "#84F491",
+            "waveStroke": 5,
+            "waveRad": 20,
+            "smokes": 0,
+            "sparks": 0
+        }
+        "hitShake": 0.625,
+        "hitEffect": {
+            "type": "ExplosionEffect",
+            "waveColor": "#84F491",
+            "waveStroke": 5,
+            "waveRad": 20,
+            "smokes": 0,
+            "sparks": 0
+        }
+    },
+
+    "category": "turret",
+    "research": "smrtc",
+    "requirements": [
+        { "item": "lead", "amount": 500 },
+        { "item": "silicon", "amount": 400 },
+        { "item": "titanium", "amount": 300 },
+        { "item": "plastanium", "amount": 200 }
+    ]
+}

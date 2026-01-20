@@ -1,0 +1,15 @@
+{
+    "type": "PayloadConveyor",
+    "name": "7x7 Payload Conveyor",
+    "size": 7,
+    "payloadLimit": 7,
+    "description":  "Moves payloads forward, accomodates up to 7x7-sized blocks and units",
+    "health": 320,
+    "requirements": [ 
+       { "item": "graphite", "amount": 20 },
+       { "item": "copper", "amount": 20 }
+    ],
+    "category": "units",
+    "research": "payload-conveyor-5",
+    "canOverdrive": false
+}

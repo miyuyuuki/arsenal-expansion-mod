@@ -1,0 +1,44 @@
+{
+    "type": "Reconstructor",
+    "name": "Arsenal Exponential Reconstructor",
+    "description": "Upgrades inputted Arsenal Expansion units to the second tier.",
+    "health": 2800,
+    "size": 7,
+    "itemCapacity": 800,
+    "hasLiquids": true,
+    "liquidCapacity": 120,
+    "solid": true,
+
+    "requirements": [
+        { "item": "lead", "amount": 1000 },
+        { "item": "thorium", "amount": 400 },
+        { "item": "silicon", "amount": 600 },
+        { "item": "titanium", "amount": 750 },
+        { "item": "plastanium", "amount": 500 },  
+        { "item": "phase-fabric", "amount": 200 }
+    ],
+
+    "upgrades": [
+        ["battlemaster", "overlord"],
+        ["gauss-tank", "golem-tank"],
+        ["mrt", "battle-fortress"],
+        ["dragon-tank", "inferno-cannon"]
+    ],
+
+    "consumes": {
+        "power": 15,
+
+        "items": [
+            { "item": "silicon", "amount": 400 },
+            { "item": "titanium", "amount": 350 },
+            { "item": "plastanium", "amount": 300 }
+        ],
+
+        "liquid": "cryofluid/1"
+    },
+
+    "constructTime": 5400,
+
+    "category": "units",
+    "research": "war-factory"
+}

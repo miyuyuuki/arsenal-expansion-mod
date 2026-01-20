@@ -1,0 +1,250 @@
+{
+    "type": "ItemTurret",
+    "name": "[#BF92F9]Fist of Aleksandr[]",
+    "description": '''
+    Fires huge shells at enemy targets that cause violent explosions.
+    
+    Deals extra damage to buildings. Cannot attack air targets.
+    ''',
+    "health": 2000,
+    "size": 4,
+    "reload": 300,
+    "inaccuracy": 0,
+    "shootSound": "heavyGunShoot2",
+    "ammoUseEffect": "casing4",
+    "targetAir": false,
+    "targetGround": true,
+    "range": 480,
+    "shake": 20,
+    "shootY": 40,
+    "ammoPerShot": 10,
+    "rotateSpeed": 1.5,
+    "recoil": 10,
+    "drawer": {
+        "type": "DrawTurret"
+            "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-barrel",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -10
+                }
+            ]
+        }
+    ]
+},
+
+    "ammoTypes": {
+        "thorium": {
+            "ammoMultiplier": 1,
+            "type": "ArtilleryBulletType",
+            "radius": 10,
+            "speed": 4, 
+            "shootY": 40,
+            "width": 30,
+            "height": 40,
+            "splashDamageRadius": 90, 
+            "splashDamage": 250,
+            "scaledSplashDamage": true,
+            "buildingDamageMultiplier": 1.4,
+            "lifetime": 120,
+            "collides": false,
+            "collidesAir": false,
+            "collidesTiles": false,
+            "shootEffect": ["scatheLight", "scatheExplosion"],
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#F9A3C7",
+            "trailLength": 45,
+            "trailWidth": 3.5,
+            "trailSinScl": 0.2,
+            "trailSinMag": 2,
+            "trailEffect": "none",
+            "backColor": "#F9A3C7",
+            "frontColor": "#FFFFFF",
+            "despawnColor": "#F9A3C7",
+            "despawnEffect": "none",
+            "despawnShake": 10,
+            "hitEffect": ["titanSmoke", "titanExplosion"],
+            "hitSound": "boomSound1",
+            "hitColor": "#F9A3C7",
+            "hitShake": 10,
+            "shrinkY": 0
+
+            "status": "slow",
+            "statusDuration": 180
+        },
+
+        "blast-compound": {
+            "ammoMultiplier": 1,
+            "type": "ArtilleryBulletType",
+            "radius": 10,
+            "speed": 4, 
+            "shootY": 40,
+            "width": 30,
+            "height": 40,
+            "splashDamageRadius": 120, 
+            "splashDamage": 275,
+            "scaledSplashDamage": true,
+            "buildingDamageMultiplier": 1.6,
+            "lifetime": 120,
+            "collides": false,
+            "collidesAir": false,
+            "collidesTiles": false,
+            "shootEffect": ["scatheLight", "scatheExplosion"],
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#FF795E",
+            "trailLength": 45,
+            "trailWidth": 3.5,
+            "trailSinScl": 0.2,
+            "trailSinMag": 2,
+            "trailEffect": "none",
+            "backColor": "#FF795E",
+            "frontColor": "#FFFFFF",
+            "despawnColor": "#FF795E",
+            "despawnEffect": "none",
+            "despawnShake": 10,
+            "hitEffect": ["titanSmoke", "titanExplosion"],
+            "hitSound": "boomSound1",
+            "hitColor": "#FF795E",
+            "hitShake": 10,
+            "shrinkY": 0
+
+            "status": "blasted",
+            "statusDuration": 300
+        },
+
+        "surge-alloy": {
+            "ammoMultiplier": 1,
+            "type": "ArtilleryBulletType",
+            "radius": 10,
+            "speed": 4, 
+            "shootY": 40,
+            "width": 30,
+            "height": 40,
+            "splashDamageRadius": 135, 
+            "splashDamage": 300,
+            "scaledSplashDamage": true,
+            "buildingDamageMultiplier": 1.8,
+            "lifetime": 120,
+            "collides": false,
+            "collidesAir": false,
+            "collidesTiles": false,
+            "shootEffect": ["scatheLight", "scatheExplosion"],
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#FCF387",
+            "trailLength": 45,
+            "trailWidth": 3.5,
+            "trailSinScl": 0.2,
+            "trailSinMag": 2,
+            "trailEffect": "none",
+            "backColor": "#FCF387",
+            "frontColor": "#FFFFFF",
+            "despawnColor": "#FCF387",
+            "despawnEffect": "none",
+            "despawnShake": 10,
+            "hitEffect": ["titanSmoke", "titanExplosion"],
+            "hitSound": "boomSound1",
+            "hitColor": "#FCF387",
+            "hitShake": 10,
+            "shrinkY": 0
+
+            "status": "shocked",
+            "lightning": 20,
+            "lightningLength": 10,
+            "lightningDamage": 30
+        },
+
+        "plastanium": {
+            "ammoMultiplier": 1,
+            "type": "ArtilleryBulletType",
+            "radius": 10,
+            "speed": 4, 
+            "shootY": 40,
+            "width": 30,
+            "height": 40,
+            "splashDamageRadius": 75, 
+            "splashDamage": 225,
+            "scaledSplashDamage": true,
+            "buildingDamageMultiplier": 1.2,
+            "lifetime": 120,
+            "collides": false,
+            "collidesAir": false,
+            "collidesTiles": false,
+            "shootEffect": ["scatheLight", "scatheExplosion"],
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#CBD97F",
+            "trailLength": 45,
+            "trailWidth": 3.5,
+            "trailSinScl": 0.2,
+            "trailSinMag": 2,
+            "trailEffect": "none",
+            "backColor": "#CBD97F",
+            "frontColor": "#FFFFFF",
+            "despawnColor": "#CBD97F",
+            "despawnEffect": "none",
+            "despawnShake": 10,
+            "hitEffect": ["titanSmoke", "titanExplosion"],
+            "hitSound": "boomSound1",
+            "hitColor": "#CBD97F",
+            "hitShake": 10,
+            "shrinkY": 0
+
+            "fragLifeMin": 1.5,
+            "fragBullets": 20,
+
+            "fragBullet": {
+            "type": "ArtilleryBulletType",
+            "speed": 2,
+            "width": 15,
+            "height": 20,
+            "splashDamageRadius": 36, 
+            "splashDamage": 90,
+            "scaledSplashDamage": true,
+            "lifetime": 60,
+            "collidesTiles": false,
+            "trailColor": "#CBD97F",
+            "trailLength": 22.5,
+            "trailWidth": 1.75,
+            "trailEffect": "none",
+            "trailColor": "#CBD97F",
+            "backColor": "#CBD97F",
+            "frontColor": "#FFFFFF",
+            "despawnEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#CBD97F",
+                "waveStroke": 10,
+                "waveRad": 36,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "despawnShake": 5,
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#CBD97F",
+                "waveStroke": 10,
+                "waveRad": 36,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "hitShake": 5,
+            "shrinkY": 0
+        }
+    }
+},
+
+    "category": "turret",
+    "research": "sgtg",
+    "requirements": [
+        { "item": "copper", "amount": 350 },
+        { "item": "lead", "amount": 300 },
+        { "item": "graphite", "amount": 250 },
+        { "item": "silicon", "amount": 200 },
+        { "item": "thorium", "amount": 100 }
+    ]
+}

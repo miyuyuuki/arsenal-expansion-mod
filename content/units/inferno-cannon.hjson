@@ -1,0 +1,45 @@
+{
+    "type": "tank",
+    "name": "[#FF1414]Inferno Cannon[]",
+    "description": '''
+    [#FF1414]<Tier II Flame Tank>[]
+    
+    Artillery-based flame tank. Fires artillery shells that cause area-wide firestorms.
+
+    Has a decent range than its predecessor. Can fire from a distance and best used in groups to maximize firestorms occuring.
+
+    Cannot attack air targets.
+    ''',
+    "details": "Let's start an inferno!",
+    "speed": 0.45,
+    "template": "TankUnitType",
+    "health": 5250,
+    "armor": 10, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 2.0,
+    "hitSize": 45, 
+    "targetAir": false,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 5,
+    "immunities": ["burning", "melting"]
+
+    "treadRects": [
+        {
+            "name": "inferno-cannon-treads",
+            "x": -56,
+            "y": -74,
+            "width": 20,
+            "height": 208
+        }
+    ],
+
+    "research": {
+        "parent": "dragon-tank",
+        "requirements": [
+            { "item": "silicon", "amount": 60000 },
+            { "item": "titanium", "amount": 52500 },
+            { "item": "plastanium", "amount": 45000 }
+        ]
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "type": "tank",
+    "name": "[#BF92F9]Gauss Tank[]",
+    "description": '''
+    [#BF92F9]<Tier I Specialist Tank>[]
+
+    Fires gauss shells at enemy targets, lightly armored and mobile, best used in groups. 
+    
+    Great against swarms of air units.
+    ''',
+    "details": "Need a bullet barrage?",
+    "speed": 0.75,
+    "template": "TankUnitType",
+    "health": 650,
+    "armor": 5, 
+    "treadPullOffset": 3,    
+    "rotateSpeed": 3.5,
+    "hitSize": 30, 
+    "targetAir": true,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 2,
+
+    "treadRects": [
+        {
+	        "name":"gauss-tank-treads",
+            "x": -40,
+            "y": -56,
+            "width": 20,
+            "height": 128
+        }
+    ],
+
+    "weapons": [ 
+    { 
+        "name": "gauss-tank-turret",
+        "reload": 6.5, 
+        "x": 0, 
+        "y": -0.34, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 22.5,
+        "shake": 1.25,
+        "shootSound": "mgShoot2",
+        "ejectEffect": "casing2",
+        "mirror": false,
+        "rotateSpeed": 4,
+        "recoil": 2,
+        "inaccuracy": 5,
+        "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-gun",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -2
+                }
+            ]
+        }
+    ],
+
+        "bullet": { 
+            "type": "BasicBulletType", 
+            "speed": 10, 
+            "shootY": 22.5,
+            "width": 10,
+            "height": 20,
+            "shootEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 2.5,
+                "waveRad": 5,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "splashDamageRadius": 20, 
+            "splashDamage": 20,
+            "scaledSplashDamage": true,
+            "damage": 15,
+            "lifetime": 20,
+            "trailColor": "#FFD06C",
+            "trailLength": 6,
+            "trailWidth": 2,
+            "trailEffect": "none",
+            "backColor": "#FFD06C",
+            "frontColor": "#FFFFFF",
+            "despawnShake": 0.625,
+            "despawnEffect":  {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+                },
+            "hitShake": 0.625,
+            "hitSound": "none",
+            "hitEffect": {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 5,
+                "waveRad": 20,
+                "smokes": 0,
+                "sparks": 0
+            }
+        } 
+    }
+],
+
+    "research": {
+        "parent": "war-factory",
+        "requirements": [
+            { "item": "graphite", amount: 6000 },
+            { "item": "silicon", amount: 5500 },
+            { "item": "titanium", amount: 5000 }
+        ]
+    }
+}

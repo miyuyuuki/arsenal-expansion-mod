@@ -1,0 +1,15 @@
+{
+    "type": "PayloadConveyor",
+    "name": "5x5 Payload Conveyor",
+    "size": 5,
+    "payloadLimit": 5,
+    "description":  "Moves payloads forward, accomodates up to 5x5-sized blocks and units",
+    "health": 320,
+    "requirements": [ 
+       { "item": "graphite", "amount": 15 },
+       { "item": "copper", "amount": 15 }
+    ],
+    "category": "units",
+    "research": "war-factory",
+    "canOverdrive": false
+}

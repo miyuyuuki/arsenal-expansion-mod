@@ -1,0 +1,138 @@
+{
+    "type": "ItemTurret",
+    "name": "[#FFA665]Mini-Gunner[]",
+    "description": '''
+    Rapidly fires bullets at enemy targets.
+    ''',
+    "details": '''
+    Developer's Commentary: I remember a mod back in v6, where weapons of all vanilla T5 units were repurposed as stationary defenses. 
+    
+    It was a silly idea and I decided recreated it in this mod. Can be potentially unbalanced due to their ability to be overdriven.
+    ''',
+    "health": 400,
+    "size": 1,
+    "reload": 4.50,
+    "shootSound": "mgShoot1",
+    "ammoUseEffect": "casing1",
+    "targetAir": true,
+    "targetGround": true,
+    "range": 250,
+    "inaccuracy": 5,
+    "shake": 0.25,
+    "shootY": 3,
+    "rotateSpeed": 4,
+    "recoil": 1.5,
+
+    "ammoTypes": {
+        "lead": {
+        "ammoMultiplier": 4,
+        "type": "BasicBulletType",
+        "speed": 10, 
+        "shootY": 3,
+        "width": 7.5,
+        "height": 22.5,
+        "damage": 10,
+        "buildingDamageMultiplier": 0.65,
+        "lifetime": 25,
+        "backColor": "#8C7FA9",
+        "frontColor": "#FFFFFF",
+        "trailColor": "#8C7FA9",
+        "trailLength": 7.5,
+        "trailWidth": 1.5,
+        "despawnColor": "#8C7FA9",
+        "hitColor": "#8C7FA9"
+        },
+
+        "titanium": {
+        "ammoMultiplier": 4,
+        "type": "BasicBulletType",
+        "speed": 10, 
+        "shootY": 3,
+        "width": 7.5,
+        "height": 22.5,
+        "damage": 17.5,
+        "pierceCap": 2,
+        "buildingDamageMultiplier": 0.65,
+        "lifetime": 25,
+        "backColor": "#A4B8FA",
+        "frontColor": "#FFFFFF",
+        "trailColor": "#A4B8FA",
+        "trailLength": 7.5,
+        "trailWidth": 1.5,
+        "despawnColor": "#A4B8FA",
+        "hitColor": "#A4B8FA"
+        },
+
+        "silicon": {
+        "ammoMultiplier": 4,
+        "reloadMultiplier": 1.25,
+        "type": "BasicBulletType",
+        "speed": 10, 
+        "shootY": 3,
+        "width": 7.5,
+        "height": 22.5,
+        "damage": 12.5,
+        "buildingDamageMultiplier": 0.65,
+        "lifetime": 25,
+        "backColor": "#8E9097",
+        "frontColor": "#FFFFFF",
+        "trailColor": "#8E9097",
+        "trailLength": 7.5,
+        "trailWidth": 1.5,
+        "despawnColor": "#8E9097",
+        "hitColor": "#8E9097",
+        "homingRange": 15,
+        "homingPower": 0.05
+        },
+
+        "pyratite": {
+        "ammoMultiplier": 6,
+        "type": "BasicBulletType",
+        "speed": 10, 
+        "shootY": 3,
+        "width": 7.5,
+        "height": 22.5,
+        "damage": 15,
+        "buildingDamageMultiplier": 0.65,
+        "lifetime": 25,
+        "backColor": "#FFAA5F",
+        "frontColor": "#FFFFFF",
+        "trailColor": "#FFAA5F",
+        "trailLength": 7.5,
+        "trailWidth": 1.5,
+        "despawnColor": "#FFAA5F",
+        "hitColor": "#FFAA5F",
+        "makeFire": true,
+        "status": "burning",
+        "statusDuration": 150
+        },
+
+        "graphite": {
+            "ammoMultiplier": 6,
+            "type": "BasicBulletType", 
+            "speed": 10, 
+            "shootY": 23,
+            "width": 7.5,
+            "height": 22.5,
+            "splashDamageRadius": 8, 
+            "damage": 20,
+            "buildingDamageMultiplier": 0.65,
+            "lifetime": 25,
+            "trailColor": "#95ABD9",
+            "trailLength": 7.5,
+            "trailWidth": 1.5,
+            "backColor": "#95ABD9",
+            "frontColor": "#FFFFFF",
+            "despawnColor": "#95ABD9",
+            "hitColor": "#95ABD9"
+        }
+    }
+
+    "category": "turret",
+    "research": "war-factory",
+    "requirements": [
+        { "item": "copper", "amount": 100 },
+        { "item": "lead", "amount": 75 },
+        { "item": "titanium", "amount": 50 }
+    ]
+}

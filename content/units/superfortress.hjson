@@ -1,0 +1,38 @@
+{
+    "type": "tank",
+    "name": "[#84F491]Superfortress[]",
+    "description": '''
+    [#84F491]<Tier III Support Tank>[]
+    
+    Superheavy support tank. Sacrifices offensive armaments in exchange for strong defensive capabilities.
+
+    Armed with a large repair ray that heals nearby allies and overclocks them, boosting their combat prowess.
+    
+    Projects a forcefield around itself and nullifies incoming bullets with point-defense weapons.
+
+    Immune to ALL vanilla debuffs.
+    ''',
+    "details": "Oct but in tank form!",
+    "speed": 0.3,
+    "template": "TankUnitType",
+    "health": 15000,
+    "armor": 60, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 1,
+    "hitSize": 60, 
+    "targetAir": true,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 10,
+    "immunities": ["burning", "freezing", "wet", "melting", "sapped", "electrified", "spore-slowed", "tarred", "slow", "unmoving", "blasted", "shocked"],
+
+    "treadRects": [
+        {
+            "name": "superfortress-treads",
+            "x": -64,
+            "y": -146,
+            "width": 20,
+            "height": 336
+        }
+    ],
+}
