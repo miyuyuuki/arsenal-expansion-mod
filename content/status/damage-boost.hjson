@@ -1,0 +1,17 @@
+{
+    "name": "Damage Boost",
+    "type": "status",
+    "description": "Increases damage dealt for a short time."
+    "damageMultiplier": 1.25,
+    "color": "#FFA665",
+    "effect": {
+        "type": "WaveEffect"
+        "sizeFrom": 0,
+        "sizeTo": 2,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "sides": 6,
+        "colorFrom":"#FFA665",
+        "colorTo": "#FFFFFF"
+    }
+}

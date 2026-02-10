@@ -1,0 +1,13 @@
+{
+    "category": "effect",
+    "type": "cores",
+    "name": "Arsenal Expansion",
+    "details": "The starting point for this mod.",
+    "buildVisibility": "hidden",
+    "alwaysUnlocked": true,
+    "research": {
+      "root": true,
+      "name": "Arsenal Expansion",
+      "requiresUnlock": false
+    }
+}

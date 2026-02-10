@@ -1,0 +1,171 @@
+{
+    "type": "tank",
+    "name": "[#84F491]Superfortress[]",
+    "description": '''
+    [#84F491]<Tier III Support Tank>[]
+    
+    Superheavy support tank. Sacrifices offensive armaments in exchange for strong defensive capabilities.
+
+    Armed with a large repair ray that heals nearby allied units. Provides multiple buffs to allies with its status field.
+    
+    Projects a forcefield around itself and nullifies incoming bullets with point-defense weapons.
+
+    Immune to ALL vanilla and Arsenal Expansion debuffs.
+    ''',
+    "details": "Oct but in tank form!",
+    "speed": 0.3,
+    "template": "TankUnitType",
+    "health": 15000,
+    "armor": 60, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 1,
+    "hitSize": 45, 
+    "targetAir": true,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 10,
+    "immunities": ["burning", "freezing", "wet", "melting", "sapped", "electrified", "spore-slowed", "tarred", "slow", "unmoving", "blasted", "shocked", "electroshock-therapy", "shell-shock", "overpenetration"],
+
+    "treadRects": [
+        {
+            "name": "support3-superfortress-treads",
+            "x": -64,
+            "y": -146,
+            "width": 20,
+            "height": 336
+        }
+    ],
+
+    "weapons": [
+        {
+            "type": "PointDefenseWeapon",
+            "name": "support3-superfortress-point-defense-weapon",
+            "mirror": true,
+            "x": 14,
+            "y": 20,
+            "reload": 20,
+            "recoil": 0,
+            "targetInterval": 5,
+            "targetSwitchInterval": 7.5,
+
+            "bullet": {
+                "type": "BulletType",
+                "shootEffect": "sparkShoot",
+                "hitEffect": "pointHit",
+                "hitColor": "#62AE7F",
+                "maxRange": 240,
+                "damage": 90
+            }
+        },
+
+        {
+            "type": "PointDefenseWeapon",
+            "name": "support3-superfortress-point-defense-weapon",
+            "mirror": true,
+            "x": -14,
+            "y": -20,
+            "reload": 20,
+            "recoil": 0,
+            "targetInterval": 5,
+            "targetSwitchInterval": 7.5,
+
+            "bullet": {
+                "type": "BulletType",
+                "shootEffect": "sparkShoot",
+                "hitEffect": "pointHit",
+                "hitColor": "#62AE7F",
+                "maxRange": 240,
+                "damage": 90
+            }
+        },
+
+        {
+            "type": "RepairBeamWeapon",
+            "name": "support3-superfortress-repair-ray",
+            "x": 0, 
+            "y": 0,
+            "mirror": false,
+            "shootY": 45,
+            "rotateSpeed": 3,
+            "beamWidth": 2,
+            "repairSpeed": 7.5,
+            "bullet": {
+                "type": "BulletType",
+                "maxRange": 240
+            }
+        }
+    ],
+
+    "abilities": [
+        {
+            "type": "mindustry.entities.abilities.ForceFieldAbility",
+            "radius": 150,
+            "regen": 5,
+            "max": 5000,
+            "cooldown": 600
+        },
+
+        {
+            "type": "mindustry.entities.abilities.StatusFieldAbility",
+            "activeEffect": {
+                "type": "WaveEffect"
+                "sizeFrom": 0,
+                "sizeTo": 160,
+                "strokeFrom": 4,
+                "strokeTo": 0,
+                "sides": 5,
+                "colorFrom":"#95A7FF",
+                "colorTo": "#FFFFFF" 
+            }
+            "effect": "fortified",
+            "reload": 600,
+            "duration": 300,
+            "range": 160
+        },
+
+        {
+            "type": "mindustry.entities.abilities.StatusFieldAbility",
+            "activeEffect": {
+                "type": "WaveEffect"
+                "sizeFrom": 0,
+                "sizeTo": 152,
+                "strokeFrom": 4,
+                "strokeTo": 0,
+                "sides": 4,
+                "colorFrom":"#00FF1A",
+                "colorTo": "#FFFFFF" 
+            }
+            "effect": "rejuvenation",
+            "reload": 600,
+            "duration": 300,
+            "range": 160
+        },
+
+        {
+            "type": "mindustry.entities.abilities.StatusFieldAbility",
+            "activeEffect": {
+                "type": "WaveEffect"
+                "sizeFrom": 0,
+                "sizeTo": 144,
+                "strokeFrom": 4,
+                "strokeTo": 0,
+                "sides": 6,
+                "colorFrom":"#FFA665",
+                "colorTo": "#FFFFFF" 
+            }
+            "effect": "damage-boost",
+            "reload": 600,
+            "duration": 300,
+            "range": 160
+        }
+    ],
+    "research": {
+        "parent": "support2-battle-fortress",
+        "requirements": [
+            { "item": "silicon", amount: 90000 },
+            { "item": "surge-alloy", amount: 45000 },
+            { "item": "plastanium", amount: 60000 },
+            { "item": "phase-fabric", amount: 40000 },
+        ]
+    }
+}

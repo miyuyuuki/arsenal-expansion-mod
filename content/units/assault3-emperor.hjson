@@ -1,0 +1,189 @@
+{
+    "type": "tank",
+    "name": "[#FFA665]Emperor[]",
+    "description": '''
+    [#FFA665]<Tier III Assault Tank>[]
+
+    Superheavy assault tank, rapidly fires large, piercing frag shells at enemy targets in horrifying quantities.
+
+    Possesses a very strong armor, making it a force to be reckoned with on the frontline.
+
+    Has a modest HP for a Tier 5 unit, but its sheer firepower can rival other units of the same tier.
+    ''',
+    "details": "Omae wa mou shindeiru... Oh wait, that's Japanese.",
+    "speed": 0.275,
+    "template": "TankUnitType",
+    "health": 18000,
+    "armor": 46, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 1,
+    "hitSize": 45, 
+    "targetAir": true,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 10,
+
+    "treadRects": [
+        {
+            "name": "assault3-emperor-treads",
+            "x": -64,
+            "y": -146,
+            "width": 20,
+            "height": 336
+        }
+    ],
+
+    "weapons": [
+    {
+    "name": "assault3-emperor-turret",
+    "reload": 10, 
+    "x": 0, 
+    "y": 0, 
+    "top": true, 
+    "rotate": true,
+    "shootY": 45,
+    "shake": 3.33,
+    "shootSound": "emperorShoot",
+    "ejectEffect": "casing4",
+    "mirror": false,    
+    "rotateSpeed": 1.25,
+    "recoil": 5,
+    "recoils": 2,
+        
+    "shoot": {
+    "type": "ShootAlternate",
+    "spread": -20
+    },
+
+    "parts": [
+        {
+        "type": "RegionPart",
+        "suffix": "-gun-l",
+        "x": 0, 
+        "y": 0,
+        "under": true,
+        "recoilIndex": 1,
+        "moves": [
+            {
+            "type": "PartMove",
+            "progress": "recoil",
+            "y": -5
+        }
+    ],
+},
+
+        {
+        "type": "RegionPart",
+        "suffix": "-gun-r",
+        "x": 0, 
+        "y": 0,
+        "under": true,
+        "recoilIndex": 0,
+        "moves": [
+            {
+            "type": "PartMove",
+            "progress": "recoil",
+            "y": -5
+            }
+        ]
+    }, 
+],
+
+    "bullet": { 
+        "type": "BasicBulletType",
+        "speed": 10, 
+        "shootY": 27.5,
+        "width": 30,
+        "height": 40,
+        "hitSize": 11.875,
+        "splashDamageRadius": 32, 
+        "splashDamage": 40,
+        "scaledSplashDamage": true,
+        "smokeEffect": "shootSmokeTitan",
+        "trailColor": "#FFD06C",
+        "trailLength": 15,
+        "trailWidth": 2.5,
+        "trailEffect": "none",
+        "damage": 100,
+        "pierceCap": 2,
+        "pierceBuilding": true,
+        "lifetime": 35,
+        "backColor": "#FFD06C",
+        "frontColor": "#FFD06C",
+        "despawnShake": 0.625,
+        "despawnEffect": "none",
+        "despawnEffect": {
+            "type": "ExplosionEffect",
+            "waveColor": "#FFD06C",
+            "waveStroke": 10,
+            "waveRad": 32,
+            "smokes": 0,
+            "sparks": 0
+        },
+        "hitSound": "none",
+        "hitShake": 0.625,
+        "hitEffect": "none",
+        "hitEffect": {
+            "type": "ExplosionEffect",
+            "waveColor": "#FFD06C",
+            "waveStroke": 10,
+            "waveRad": 32,
+            "smokes": 0,
+            "sparks": 0
+        },
+        "fragLifeMin": 2.5,
+        "fragBullets": 5,
+        "fragRandomSpread": 180,
+            "fragBullet": {
+            "type": "BasicBulletType",
+            "speed": 5,
+            "width": 15,
+            "height": 20,
+            "hitSize": 5.9375,
+            "splashDamageRadius": 16, 
+            "splashDamage": 20,
+            "scaledSplashDamage": true,
+            "damage": 40,
+            "lifetime": 15,
+            "trailColor": "#FFD06C",
+            "trailLength": 20,
+            "trailWidth": 2.5,
+            "trailEffect": "none",
+            "trailColor": "#FFD06C",
+            "backColor": "#FFD06C",
+            "frontColor": "#FFD06C",
+            "despawnShake": 0.625,
+            "despawnEffect": "none",
+            "despawnEffect":  {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 10,
+                "waveRad": 16,
+                "smokes": 0,
+                "sparks": 0
+            },
+            "hitShake": 0.625,
+            "hitEffect": "none",
+            "hitEffect":  {
+                "type": "ExplosionEffect",
+                "waveColor": "#FFD06C",
+                "waveStroke": 10,
+                "waveRad": 16,
+                "smokes": 0,
+                "sparks": 0
+            },
+            }
+        }
+    }     
+]
+
+    "research": {
+        "parent": "assault2-overlord",
+        "requirements": [
+            { "item": "silicon", amount: 90000 },
+            { "item": "surge-alloy", amount: 45000 },
+            { "item": "plastanium", amount: 60000 },
+            { "item": "phase-fabric", amount: 40000 },
+        ]
+    }
+}

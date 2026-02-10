@@ -1,0 +1,140 @@
+{
+    "type": "tank",
+    "name": "[#FF1414]Inferno Cannon[]",
+    "description": '''
+    [#FF1414]<Tier II Flame Tank>[]
+    
+    Artillery-based flame tank, armed with a repurposed turret of a Golem Tank. Fires incendiary artillery shells that cause area-wide fires.
+
+    Has a decent range than its predecessor. Can fire from a distance and best used in groups to maximize fires occuring.
+
+    Cannot attack air targets.
+    ''',
+    "details": "Let's start an inferno!",
+    "speed": 0.45,
+    "template": "TankUnitType",
+    "health": 5250,
+    "armor": 10, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 2.0,
+    "hitSize": 35, 
+    "targetAir": false,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 5,
+    "immunities": ["burning", "melting"]
+
+    "treadRects": [
+        {
+            "name": "flame2-inferno-cannon-treads",
+            "x": -56,
+            "y": -74,
+            "width": 20,
+            "height": 208
+        }
+    ],
+
+    "weapons": [
+        { 
+        "name": "flame2-inferno-cannon-turret",
+        "reload": 200, 
+        "x": 0, 
+        "y": -5, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 45,
+        "shake": 10,
+        "shootSound": "heavyGunShoot2",
+        "ejectEffect": "casing4",
+        "mirror": false,
+        "rotateSpeed": 1.5,
+        "recoil": 7.5,
+        "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-gun",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -7.5
+                }
+            ]
+        }
+    ],
+
+        "bullet": { 
+            "type": "ArtilleryBulletType",
+            "radius": 10,
+            "speed": 4, 
+            "shootY": 45,
+            "width": 20,
+            "height": 40,
+            "hitSize": 7.5,
+            "splashDamageRadius": 60, 
+            "splashDamage": 200,
+            "scaledSplashDamage": true,
+            "damage": 100,
+            "lifetime": 90,
+            "collides": true,
+            "collidesTiles": true,
+            "shootEffect": "scatheLight",
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#FFAA5F",
+            "trailLength": 30,
+            "trailWidth": 2.5,
+            "trailSinScl": 0.2,
+            "trailSinMag": 2,
+            "trailEffect": "none",
+            "backColor": "#FFAA5F",
+            "frontColor": "#FFAA5F",
+            "despawnColor": "#FFAA5F",
+            "despawnEffect": "none",
+            "despawnShake": 7.5,
+            "hitEffect": "titanExplosion",
+            "hitSound": "infernoCannonBoom",
+            "hitColor": "#FFAA5F",
+            "hitShake": 7.5,
+            "shrinkY": 0,
+            "makeFire": true,
+            "status": "burning",
+            "statusDuration": 300,
+            "fragLifeMin": 2,
+            "fragBullets": 40,
+            "fragBullet": {
+            "type": "BasicBulletType",
+            "speed": 2,
+            "width": 10,
+            "height": 10,
+            "hitSize": 3.75,
+            "damage": 10,
+            "lifetime": 30,
+            "trailColor": "#FFAA5F",
+            "trailLength": 20,
+            "trailWidth": 2.5,
+            "trailEffect": "none",
+            "trailColor": "#FFAA5F",
+            "backColor": "#FFAA5F",
+            "frontColor": "#FFAA5F",
+            "despawnEffect": "none",
+            "hitEffect": "none",
+            "makeFire": true,
+            "status": "burning",
+            "statusDuration": 150,
+            }
+        }
+    }
+],
+
+    "research": {
+        "parent": "flame1-dragon-tank",
+        "requirements": [
+            { "item": "silicon", "amount": 60000 },
+            { "item": "titanium", "amount": 52500 },
+            { "item": "plastanium", "amount": 45000 }
+        ]
+    }
+}

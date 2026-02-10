@@ -1,0 +1,292 @@
+{
+    "type": "tank",
+    "name": "[#FF1414]Earth Scorcher[]",
+    "description": '''
+    [#FF1414]<Tier III Flame Tank>[]
+    
+    Superheavy flame tank. Fires large incendiary cruise missiles that seek out enemies and set fire over a large area.
+
+    Armed with two frontal high-caliber autocannons that fire incendiary bullets at enemy targets, setting them on fire.
+    
+    Also armed with two rear incendiary mini-missile launchers that also set an area on fire.
+    ''',
+    "details": "The epitome of flame-based warfare.",
+    "speed": 0.3,
+    "template": "TankUnitType",
+    "health": 17000,
+    "armor": 45, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 1,
+    "hitSize": 45, 
+    "targetAir": true,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 10,
+    "immunities": ["burning", "melting"]
+
+    "treadRects": [
+        {
+            "name": "flame3-earth-scorcher-treads",
+            "x": -64,
+            "y": -146,
+            "width": 20,
+            "height": 336
+        }
+    ],
+
+    "weapons": [
+        {
+        "name": "flame3-earth-scorcher-mini-missile",
+        "reload": 45, 
+        "x": 14, 
+        "y": -20, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 5,
+        "shootSound": "earthScorcherMiniMissileFire",
+        "mirror": false,
+        "rotateSpeed": 4,
+        "recoil": 1.5,
+        "inaccuracy": 0,
+
+        "bullet": {
+            "type": "MissileBulletType"
+            "speed": 5, 
+            "shootY": 5,
+            "width": 7.5,
+            "height": 40,
+            "hitSize": 5.9375,
+            "homingRange": 60,
+            "homingPower": 0.10,
+            "homingDelay": 5,
+            "splashDamageRadius": 40, 
+            "splashDamage": 60,
+            "scaledSplashDamage": true,
+            "damage": 30,
+            "lifetime": 75,
+            "backColor": "#FFAA5F",
+            "frontColor": "#FFAA5F",
+            "trailColor": "#FFAA5F",
+            "trailLength": 25,
+            "trailWidth": 1.5,
+            "trailEffect": "none",
+            "despawnEffect": {
+                "type": "WaveEffect"
+                "sizeFrom": 0,
+                "sizeTo": 40,
+                "strokeFrom": 4,
+                "strokeTo": 0,
+                "sides": 5,
+                "colorFrom":"#FFAA5F",
+                "colorTo": "#FFAA5F"
+            },
+            "hitEffect": {
+                "type": "WaveEffect"
+                "sizeFrom": 0,
+                "sizeTo": 40,
+                "strokeFrom": 4,
+                "strokeTo": 0,
+                "sides": 5,
+                "colorFrom":"#FFAA5F",
+                "colorTo": "#FFAA5F"
+            },
+            "makeFire": true,
+            "status": "burning",
+            "statusDuration": 240,
+            }
+        },
+
+        {
+        "name": "flame3-earth-scorcher-mini-missile",
+        "reload": 45, 
+        "x": -14, 
+        "y": -20, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 5,
+        "shootSound": "earthScorcherMiniMissileFire",
+        "mirror": false,
+        "rotateSpeed": 4,
+        "recoil": 1.5,
+        "inaccuracy": 0,
+
+        "bullet": {
+            "type": "MissileBulletType"
+            "speed": 5, 
+            "shootY": 5,
+            "width": 7.5,
+            "height": 40,
+            "hitSize": 5.9375,
+            "homingRange": 60,
+            "homingPower": 0.10,
+            "homingDelay": 5,
+            "splashDamageRadius": 40, 
+            "splashDamage": 60,
+            "scaledSplashDamage": true,
+            "damage": 30,
+            "lifetime": 75,
+            "backColor": "#FFAA5F",
+            "frontColor": "#FFAA5F",
+            "trailColor": "#FFAA5F",
+            "trailLength": 25,
+            "trailWidth": 1.5,
+            "trailEffect": "none",
+            "despawnEffect": {
+                "type": "WaveEffect"
+                "sizeFrom": 0,
+                "sizeTo": 40,
+                "strokeFrom": 4,
+                "strokeTo": 0,
+                "sides": 5,
+                "colorFrom":"#FFAA5F",
+                "colorTo": "#FFAA5F"
+            },
+            "hitEffect": {
+                "type": "WaveEffect"
+                "sizeFrom": 0,
+                "sizeTo": 40,
+                "strokeFrom": 4,
+                "strokeTo": 0,
+                "sides": 5,
+                "colorFrom":"#FFAA5F",
+                "colorTo": "#FFAA5F"
+            },
+            "makeFire": true,
+            "status": "burning",
+            "statusDuration": 240,
+            }
+        },
+
+        {
+        "name": "flame3-earth-scorcher-mg",
+        "reload": 10, 
+        "x": 14, 
+        "y": 20, 
+        "top": true, 
+        "rotate": true,
+        "rotationLimit": 180,
+        "shootY": 5,
+        "shootSound": "mgShoot1",
+        "mirror": false,
+        "rotateSpeed": 4,
+        "recoil": 1.5,
+        "inaccuracy": 2.5,
+        
+        "bullet": {
+            "type": "BasicBulletType",
+            "speed": 10, 
+            "shootY": 5,
+            "width": 7.5,
+            "height": 30,
+            "hitSize": 4.6875,
+            "damage": 50,
+            "pierceCap": 2,
+            "pierceBuilding": true,
+            "pierceDamageFactor": 0.75,
+            "lifetime": 30,
+            "backColor": "#FFAA5F",
+            "frontColor": "#FFAA5F",
+            "trailColor": "#FFAA5F",
+            "trailLength": 7.5,
+            "trailWidth": 1.5,
+            "despawnColor": "#FFAA5F",
+            "hitColor": "#FFAA5F"
+            "makeFire": true,
+            "status": "burning",
+            "statusDuration": 180,
+            }
+        },
+
+        {
+        "name": "flame3-earth-scorcher-mg",
+        "reload": 10, 
+        "x": -14, 
+        "y": 20, 
+        "top": true, 
+        "rotate": true,
+        "rotationLimit": 180,
+        "shootY": 5,
+        "shootSound": "mgShoot1",
+        "ejectEffect": "casing1",
+        "mirror": false,
+        "rotateSpeed": 4,
+        "recoil": 1.5,
+        "inaccuracy": 2.5,
+        
+        "bullet": {
+            "type": "BasicBulletType",
+            "speed": 10, 
+            "shootY": 5,
+            "width": 7.5,
+            "height": 30,
+            "hitSize": 4.6875,
+            "damage": 50,
+            "pierceCap": 2,
+            "pierceBuilding": true,
+            "pierceDamageFactor": 0.75,
+            "lifetime": 30,
+            "backColor": "#FFAA5F",
+            "frontColor": "#FFAA5F",
+            "trailColor": "#FFAA5F",
+            "trailLength": 7.5,
+            "trailWidth": 1.5,
+            "despawnColor": "#FFAA5F",
+            "hitColor": "#FFAA5F"
+            "makeFire": true,
+            "status": "burning",
+            "statusDuration": 180,
+            }
+        },
+
+        {
+        "name": "flame3-earth-scorcher-turret",
+        "reload": 450
+        "maxRange": 3,
+        "x": 0, 
+        "y": 0,
+        "top": true,
+        "rotate": true,
+        "shootY": 45,
+        "shootCone": 1,
+        "shootSound": "earthScorcherMissileLaunch",
+        "mirror": false,
+        "rotateSpeed": 1.25,
+        "recoil": 5,
+        "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-gun",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -10
+                }
+            ]
+        }
+    ],
+
+    "bullet": {
+        "type": "BulletType",
+        "speed": 0,
+        "keepVelocity": false,
+        "shootEffect": ["scatheLight", "scatheExplosion"],
+        "hitColor": "#FFAA5F",
+        "spawnUnit": "earth-scorcher-missile",
+        },
+    }
+],
+
+    "research": {
+        "parent": "flame2-inferno-cannon",
+        "requirements": [
+            { "item": "silicon", amount: 90000 },
+            { "item": "surge-alloy", amount: 45000 },
+            { "item": "plastanium", amount: 60000 },
+            { "item": "phase-fabric", amount: 40000 },
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Electroshock Therapy",
+    "type": "status",
+    "description": "Severly hinders target's combat capabilities."
+    "damageMultiplier": 0.80,
+    "speedMultiplier": 0.50,
+    "reloadMultiplier": 0.65,
+    "color": "#FFEE00",
+    "effect": {
+        "type": "ExplosionEffect",
+        "waveColor": "#FFEE00"
+        "waveStroke": 0,
+        "waveRad": 0,
+        "waveLife": 0,
+        "smokes": 0,
+        "sparks": 5,
+        "sparkColor": "#FFEE00"
+        "sparkLen": 4.5,
+        "sparkRad": 18,
+        "sparkStroke": 1.5
+    }
+}

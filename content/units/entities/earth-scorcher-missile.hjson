@@ -1,0 +1,61 @@
+{
+    "type": "missile",
+    "template": "MissileUnitType",
+    "name": "earth-scorcher-missile",
+    "speed": 3,
+    "lifetime": 450,
+    "engineColor": "#FFAA5F" ,
+    "trailColor": "#FFAA5F",
+    "engineSize": 5,
+    "engineOffset": 25,
+    "rotateSpeed": 1.5,
+    "trailLength": 50,
+    "missileAccelTime": 60,
+    "lowAltitude": true,
+    "loopSound": "missileTrail",
+    "loopSoundVolume": 1,
+    "deathSound": "earthScorcherMissileBoom",
+    "health": 250,
+    "weapons": [
+        {
+            "shootCone": 360,
+            "mirror": false,
+            "reload": 1,
+            "deathExplosionEffect": "massiveExplosion",
+            "shootOnDeath": true,
+            "shootSound": "none",
+            "shake": 20,
+            "bullet": {
+                "type": "ExplosionBulletType",
+                "splashDamage": 525,
+                "splashDamageRadius": 120,
+                "scaledSplashDamage": true,
+                "shootEffect": ["titanSmoke", "titanExplosion"],
+                "hitColor": "#FFAA5F",
+                "despawnColor": "#FFAA5F",
+                "makeFire": true,
+                "status": "burning",
+                "statusDuration": 300,
+                "despawnEffect": {
+                    "type": "WaveEffect"
+                    "sizeFrom": 0,
+                    "sizeTo": 120,
+                    "strokeFrom": 10,
+                    "strokeTo": 0,
+                    "colorFrom":"#FFAA5F",
+                    "colorTo": "#FFAA5F"
+                },
+            }
+        }
+    ],
+    "abilities": [
+        {
+            "type": "mindustry.entities.abilities.MoveEffectAbility",
+            "rotation": 180,
+            "effect": "missileTrailSmoke"
+            "y": -30,
+            "color": "#CCCCCC",
+            "interval": 10,
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Arsenal Acceleration",
+    "type": "status",
+    "description": "Increases rate of fire for a short time."
+    "reloadMultiplier": 1.5,
+    "color": "#FFEE00",
+    "effect": {
+        "type": "WaveEffect"
+        "sizeFrom": 0,
+        "sizeTo": 2,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "sides": 8,
+        "colorFrom":"#FFEE00",
+        "colorTo": "#FFFFFF"
+    }
+}

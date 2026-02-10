@@ -1,0 +1,20 @@
+{
+    "name": "Overpenetration",
+    "type": "status",
+    "description": "Causes enemy target to take more damage."
+    "healthMultiplier": 0.65,
+    "color": "#FF0000",
+    "effect": {
+        "type": "ExplosionEffect",
+        "waveColor": "#FF0000"
+        "waveStroke": 0,
+        "waveRad": 0,
+        "waveLife": 0,
+        "smokes": 0,
+        "sparks": 5,
+        "sparkColor": "#FF0000"
+        "sparkLen": 4.5,
+        "sparkRad": 18,
+        "sparkStroke": 1.5
+    },
+}

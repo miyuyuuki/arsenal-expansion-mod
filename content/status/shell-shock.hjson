@@ -1,0 +1,21 @@
+{
+    "name": "Shell Shock",
+    "type": "status",
+    "description": "Immobilizes target and making them unable to retaliate."
+    "speedMultiplier": 0,
+    "reloadMultiplier": 0,
+    "color": "#FFFFFF",
+    "effect": {
+        "type": "ExplosionEffect",
+        "waveColor": "#FFFFFF"
+        "waveStroke": 1.5,
+        "waveRad": 5,
+        "waveLife": 5,
+        "smokes": 0,
+        "sparks": 5,
+        "sparkColor": "#FFFFFF"
+        "sparkLen": 4.5,
+        "sparkRad": 18,
+        "sparkStroke": 1.5
+    },
+}

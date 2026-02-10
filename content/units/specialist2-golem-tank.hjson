@@ -1,0 +1,118 @@
+{
+    "type": "tank",
+    "name": "[#BF92F9]Golem Tank[]",
+    "description": '''
+    [#BF92F9]<Tier II Specialist Tank>[]
+
+    Heavy artillery tank, armed with a comically large cannon that fires huge shells which cause violent explosions and temporarily immobilize enemy targets.
+
+    Has less-than-ideal HP for a Tier 4 unit, but is compensated with long range, allowing it to stay out of enemy fire.
+    
+    Deals extra damage to buildings. Cannot attack air targets.
+    ''',
+    "details": "The armored fist of Aleksandr!",
+    "speed": 0.4,
+    "template": "TankUnitType",
+    "health": 5000,
+    "armor": 20, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 2.0,
+    "hitSize": 35, 
+    "targetAir": false,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 5,
+    "immunities": ["shell-shock"],
+
+    "treadRects": [
+        {
+            "name": "specialist2-golem-tank-treads",
+            "x": -56,
+            "y": -74,
+            "width": 20,
+            "height": 208
+        }
+    ],
+
+    "weapons": [
+        { 
+        "name": "specialist2-golem-tank-turret",
+        "reload": 300, 
+        "x": 0, 
+        "y": -5, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 45,
+        "shake": 20,
+        "shootSound": "heavyGunShoot2",
+        "ejectEffect": "casing4",
+        "mirror": false,
+        "rotateSpeed": 1.5,
+        "recoil": 10,
+        "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-gun",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -10
+                }
+            ]
+        }
+    ],
+
+        "bullet": { 
+            "type": "ArtilleryBulletType",
+            "radius": 10,
+            "speed": 4, 
+            "shootY": 45,
+            "width": 30,
+            "height": 40,
+            "hitSize": 8.75,
+            "splashDamageRadius": 120, 
+            "splashDamage": 400,
+            "scaledSplashDamage": true,
+            "damage": 200,
+            "buildingDamageMultiplier": 1.75,
+            "lifetime": 120,
+            "collides": true,
+            "collidesTiles": true,
+            "shootEffect": ["scatheLight", "scatheExplosion"],
+            "smokeEffect": "shootSmokeTitan",
+            "trailColor": "#F9A3C7",
+            "trailLength": 45,
+            "trailWidth": 3.5,
+            "trailSinScl": 0.2,
+            "trailSinMag": 2,
+            "trailEffect": "none",
+            "backColor": "#F9A3C7",
+            "frontColor": "#F9A3C7",
+            "despawnColor": "#F9A3C7",
+            "despawnEffect": "none",
+            "despawnShake": 10,
+            "hitEffect": ["titanSmoke", "titanExplosion"],
+            "hitSound": "boomSound1",
+            "hitColor": "#F9A3C7",
+            "hitShake": 10,
+            "shrinkY": 0
+
+            "status": "shell-shock",
+            "statusDuration": 60,
+        }
+    }
+],
+
+    "research": {
+        "parent": "specialist1-gauss-tank",
+        "requirements": [
+            { "item": "silicon", amount: 60000 },
+            { "item": "titanium", amount: 52500 },
+            { "item": "plastanium", amount: 45000 }
+        ]
+    }
+}

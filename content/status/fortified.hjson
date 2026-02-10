@@ -1,0 +1,17 @@
+{
+    "name": "Fortified",
+    "type": "status",
+    "description": "Reduces damage taken for a short time."
+    "healthMultiplier": 2,
+    "color": "#95A7FF",
+    "effect": {
+        "type": "WaveEffect"
+        "sizeFrom": 0,
+        "sizeTo": 2,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "sides": 5,
+        "colorFrom":"#95A7FF",
+        "colorTo": "#FFFFFF"
+    }
+}

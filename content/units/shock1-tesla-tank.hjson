@@ -1,0 +1,103 @@
+{
+    "type": "tank",
+    "name": "[#FFEE00]Tesla Tank[]",
+    "description": '''
+    [#FFEE00]<Tier I Shock Tank>[]
+
+    Armed with a tesla turret, fires a spread of lightning from its tesla coil that can hit multiple targets.
+
+    Can attack both ground and air targets. Best used in hordes for shocking results.
+    ''',
+    "details": "Shock and awe!",
+    "speed": 0.65,
+    "template": "TankUnitType",
+    "health": 975,
+    "armor": 5, 
+    "treadPullOffset": 3,    
+    "rotateSpeed": 3.25,
+    "hitSize": 30,
+    "targetAir": true,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 2.5,
+    "immunities": ["electroshock-therapy"]
+
+    "treadRects": [
+        {
+	        "name":"shock1-tesla-tank-treads",
+            "x": -40,
+            "y": -46,
+            "width": 20,
+            "height": 128
+        }
+    ],
+
+    "weapons": [
+        { 
+        "name": "shock1-tesla-tank-turret",
+        "reload": 90,
+        "x": 0, 
+        "y": -0.34, 
+        "top": true, 
+        "rotate": true,
+        "shootY": 22.5,
+        "shootEffect": "lightningShoot",
+        "shoot": {
+        "type": "ShootSpread",
+        "shots": 5,
+        "spread": 0
+        }
+        "shootSound": "spark",
+        "mirror": false,
+        "rotateSpeed": 2.75,
+        "recoil": 2,
+        "parts": [
+            {
+            "type": "RegionPart",
+            "suffix": "-coil",
+            "x": 0, 
+            "y": -0.34,
+            "under": true,
+            "moves": [
+                {
+                "type": "PartMove",
+                "progress": "recoil",
+                "y": -0.5
+                }
+            ]
+        }
+    ],
+
+    "bullet": {
+    "type": "LightningBulletType",
+    "lightningColor": "#FFEE00",
+    "lightningLength": 40,
+    "damage": 20,
+    "smokeEffect": "hitLancer",
+    "buildingDamageMultiplier": 0.75,
+    //Does not actually do anything; Just here to display stats
+    "status": "electroshock-therapy",
+    "statusDuration": 180,
+    "lightningType": {
+        "type": "BulletType",
+        "hitEffect": "hitLancer",
+        "hitColor": "#FFEE00",
+        "despawnEffect": "none",
+        "hittable": false,
+        "status": "electroshock-therapy",
+        "statusDuration": 180,
+        "buildingDamageMultiplier": 0.75,
+        }  
+        }
+    }
+],
+
+    "research": {
+        "parent": "fac1-war-factory",
+        "requirements": [
+            { "item": "graphite", amount: 6000 },
+            { "item": "silicon", amount: 5500 },
+            { "item": "titanium", amount: 5000 }
+        ]
+    }
+}
