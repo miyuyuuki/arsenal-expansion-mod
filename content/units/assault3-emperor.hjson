@@ -14,7 +14,7 @@
     "speed": 0.275,
     "template": "TankUnitType",
     "health": 18000,
-    "armor": 46, 
+    "armor": 45, 
     "treadPullOffset": 6,    
     "rotateSpeed": 1,
     "hitSize": 45, 
