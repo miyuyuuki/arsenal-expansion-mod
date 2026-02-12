@@ -1,0 +1,85 @@
+{
+    "type": "tank",
+    "name": "[#FFEE00]Electro Tank[]",
+    "description": '''
+    [#FFEE00]<Tier II Shock Tank>[]
+
+    Armed with a larger coil, emits a ray of static electricity, damaging enemy targets and inflicts Electroshock Therapy.
+
+    Can attack both ground and air targets.
+    ''',
+    "speed": 0.45,
+    "template": "TankUnitType",
+    "health": 5750,
+    "armor": 25, 
+    "treadPullOffset": 6,    
+    "rotateSpeed": 2.0,
+    "hitSize": 35, 
+    "targetAir": true,
+    "targetGround": true,
+    "itemCapacity": 0,
+    "crushDamage": 5,
+    "immunities": ["electroshock-therapy"],
+
+    "treadRects": [
+        {
+            "name": "shock2-electro-tank-treads",
+            "x": -56,
+            "y": -74,
+            "width": 20,
+            "height": 208
+        }
+    ],
+
+    "weapons": [
+        {
+        "name": "shock2-electro-tank-electro-cannon",
+        "x": 0,
+        "y": -5,
+        "mirror": false,
+        "top": true,
+        "rotate": true,
+        "rotateSpeed": 1.75,
+        "shootY": 40,
+        "shoot": {
+            "firstShotDelay": 40,
+        },
+        "parentizeEffects": true,  
+        "reload": 155,
+        "recoil": 0,
+        "chargeSound": "lasercharge2",
+        "shootSound": "beam",
+        "continuous": true,
+        "cooldownTime": 200,
+        "bullet": {
+            "type": "ContinuousLaserBulletType"
+            "damage": 35,
+            "length": 260,
+            "hitEffect": "hitLancer",
+            "drawSize": 420,
+            "lifetime": 160,
+            "shake": 0.5,
+            "despawnEffect": "smokeCloud",
+            "smokeEffect": "none",
+            "chargeEffect": "none",
+            "incendChance": 0,
+            "incendSpread": 0,
+            "incendAmount": 0,
+            "status": "electroshock-therapy",
+            "statusDuration": 60,
+            "colors": ["#FFE00066", "#FFEE00", "#FFFFFF"]
+            },
+        "shootStatus": "slow",
+        "shootStatusDuration": 200
+        }
+    ],
+
+    "research": {
+        "parent": "shock1-tesla-tank",
+        "requirements": [
+            { "item": "silicon", amount: 60000 },
+            { "item": "titanium", amount: 52500 },
+            { "item": "plastanium", amount: 45000 }
+        ]
+    }
+}
